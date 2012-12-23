@@ -181,6 +181,21 @@ Matrix plu(Matrix A,Matrix P, Matrix L, Matrix U)
 	E val;
 	int column=A->nb_columns;
 	int row=A->nb_rows;
+	for(i=0;i<row;i++)
+	{
+		if(A->mat[i*column+i]==0)
+		{
+			for(j=0;j<row;j++)
+			{
+				if(A->mat[j*column+i]!=0)
+				{
+					permuter(A,i,j);
+					permuter(P,i,j);
+					break;
+				}
+			}
+		}
+	}
 	U->mat[0]=A->mat[0];
 	// on remplit la colonne un de la matrice L et la ligne un de la
 	// matrice U

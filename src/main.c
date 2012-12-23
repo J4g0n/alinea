@@ -26,7 +26,7 @@ main ()
 	afficheMatrice(L);
 	afficheMatrice(U);
 
-	Matrix mult=multiplication(L,U);
+	Matrix mult=multiplication(P,multiplication(L,U));
 	afficheMatrice(mult);
 
 	return 0;
