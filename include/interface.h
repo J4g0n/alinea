@@ -5,5 +5,6 @@ int menu();
 int menuResolution();
 int menuInversion();
 int menuOperation();
+int menuDecomposition();
 
 #endif
